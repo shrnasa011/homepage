@@ -29,6 +29,8 @@ jobs:
         run: |
           mkdir _site
           cp index.html research-work.html _site/
+          mkdir -p _site/assets
+          cp -R assets/. _site/assets/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
